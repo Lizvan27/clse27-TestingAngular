@@ -12,6 +12,9 @@ import { ComponetsModule } from '../componets/componets.module';
   imports: [
     CommonModule,
     ComponetsModule
+  ],
+  exports:[
+    HomeComponent
   ]
 })
 export class PagesModule { }

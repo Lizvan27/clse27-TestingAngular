@@ -8,17 +8,18 @@ import { Component } from '@angular/core';
 export class CalcuComponent {
  
   //Primero creamos una variable datos
-  operadores;
+  operadores!: any;
 
-  n1= '';
-  n2= '';
+  n1 = 0;
+  n2 = 0;
 
+ 
   //aqui el resultado
-  resultado: string = '0';
+  resultado!: number;
 
   //luego creamos una variable para guardar la opcion selecionada
   //contra esta variable vamos con el ngModel
-  selected: string = '0'; // Iniciamos
+  selected!: string; // Iniciamos
 
   //cremoa la variable donde lo guardare
   miOpcion: string = '';
@@ -31,8 +32,8 @@ export class CalcuComponent {
     this.miOpcion = this.selected;
   }
 
-  calcular(){
-    return (this.resultado = eval(this.n1 + this.miOpcion + this.n2));
+  calcular(n1: number, n2: number, miOpcion: string){
+    return (this.resultado = eval(n1 +miOpcion + n2));
   }
 
 }
